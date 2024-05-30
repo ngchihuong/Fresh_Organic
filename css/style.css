@@ -1,0 +1,102 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+@media only screen and (max-width: 768px) {
+    .col-sm-3{
+        width: 50%!important;
+    }
+    .col-3{
+        width: 100%!important;
+        margin-top: 10px!important;
+    }
+    .col-6{
+        width: 100%!important;
+        /* color: rgba(0, 0, 0, 0.1); */
+    }
+}
+img[alt~="icon"]{
+    margin-right: 45px;
+}
+li a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+div a{
+    text-decoration: none;
+    color: white;
+}
+.nav-item.active{
+    background-color: rgb(131, 208, 68);
+    border-radius: 5px;
+}
+.title{
+    padding: 10px;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.button{
+    background: transparent;
+    padding-bottom: 8px;
+    color: white;
+    text-decoration: none;
+    border: 0;
+    z-index: 1;
+    position: relative;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: rgb(223, 219, 218);
+    z-index: -1;
+    transition: all 1s;
+}
+.button:hover::before{
+    width: 100%;
+}
+.col-sm-3 .card,.card{
+    height: 350px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    /* Kích thước ban đầu của thẻ */
+}
+.card-image {
+    /* Chuyển đổi thẻ con chứa ảnh thành một layer mới để thay đổi kích thước */
+    overflow: hidden;
+    width: 100%;
+    transition: transform 3s ease-in-out;
+}
+.card:hover .card-image {
+    /* Khi hover vào thẻ chứa ảnh, phóng to ảnh */
+    transform: scale(1.5);
+}
+.img-top {
+    width: 100%;
+    object-fit: cover;
+}
+.card-img-overlay{
+    margin-top: 130px;
+    color: white;
+}
+.card-body p{
+    color: red;
+}
+del{
+    color: lightgrey;
+}
+ul{
+    list-style: none;
+}
+.nav{
+    gap: 50px;
+}
+table,td,th,tr{
+    border: 1px solid black; 
+    padding: 4px;   
+}
